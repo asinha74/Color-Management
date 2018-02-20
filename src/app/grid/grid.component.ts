@@ -80,7 +80,7 @@ export class GridComponent implements OnInit {
 		        errorCode => this.statusCode = errorCode);
 	  }
    }
-   //Load colllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllor by id to edit
+   //Load color by id to edit
    loadColorToEdit(colorId: string) {
       this.preProcessConfigurations();
       this.colorService.getColorById(colorId)
