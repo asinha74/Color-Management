@@ -17,18 +17,6 @@
       "name": "Green",
       "description": "Green is the color of nature. It symbolizes growth, harmony, freshness and fertility. Green has strong emotional correspondence with safety.",
       "iconClass": "fa fa-gear"
-    },
-    {
-      "name": "test",
-      "description": "test",
-      "iconClass": "tes",
-      "id": 4
-    },
-    {
-      "name": "sdf",
-      "description": "kkj",
-      "iconClass": "jk",
-      "id": 5
     }
   ],
   "profile": {
