@@ -43,12 +43,8 @@
         <thead class="thead-light">
           <tr>
             <th>#</th>
-            <th (click)="sort('name')">Name
-                <span class="fa sort-icon" *ngIf="key =='name'" [ngClass]="{'fa-chevron-up':reverse,'fa-chevron-down':!reverse}"></span>
-            </th>
-            <th (click)="sort('email')">Description
-                <span class="fa sort-icon" *ngIf="key =='email'" [ngClass]="{'fa-chevron-up':reverse,'fa-chevron-down':!reverse}"></span>
-            </th>
+            <th>Name</th>
+            <th>Description</th>
             <th>Icon Class</th>
             <th>Edit</th>
             <th>Delete</th>
