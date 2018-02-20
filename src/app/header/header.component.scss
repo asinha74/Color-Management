@@ -1,0 +1,33 @@
+@import "~variable.scss";
+
+.header-front__nav{
+  padding-left: 150px;
+}
+.navbar-dark{
+  background: $global-background-color;
+  color: $font-color;
+  font-weight: bold;
+}
+.header-front__nav--rocket {
+    color: red;
+    font-size: 40px;
+}
+
+.dropdown-menu{
+  background: $global-background-color;
+  color: $font-color-white;
+}
+
+li.dropdown:hover > .dropdown-menu{
+    display: block;
+}
+
+li.dropdown:hover > .dropdown-menu > li > a  {
+  color: $font-color-white;
+  padding-left: 10px;
+}
+
+li.dropdown:hover > .dropdown-menu > li > a:hover  {
+  color: $font-color-white;
+  padding-left: 10px;
+}

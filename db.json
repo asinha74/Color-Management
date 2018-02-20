@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Red",
+      "description": "Red is the color of fire and blood, so it is associated with energy, war, danger, strength, power, determination as well as passion, desire and love.",
+      "iconClass": "fa fa-lightbulb-o"
+    },
+    {
+      "id": 2,
+      "name": "Blue",
+      "description": "Blue is the color of the sky and sea. It is often associated with depth and stability. It symbolizes trust, loyalty,wisdom, confidence, intelligence, faith, truth and heaven.",
+      "iconClass": "fa fa-html5"
+    },
+    {
+      "id": 3,
+      "name": "Green",
+      "description": "Green is the color of nature. It symbolizes growth, harmony, freshness and fertility. Green has strong emotional correspondence with safety.",
+      "iconClass": "fa fa-gear"
+    },
+    {
+      "name": "test",
+      "description": "test",
+      "iconClass": "tes",
+      "id": 4
+    },
+    {
+      "name": "sdf",
+      "description": "kkj",
+      "iconClass": "jk",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "colormanagement"
+  }
+}

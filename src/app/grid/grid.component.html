@@ -1,0 +1,70 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <form class="form-inline" [formGroup]="colorForm" (ngSubmit)="onColorFormSubmit()">
+        <div class="form-group">
+          <label for="colorName">Name</label>
+          <input type="text" class="form-control" id="colorName" formControlName="name">
+          <label *ngIf="colorForm.get('name').invalid && processValidation" [ngClass] = "'error'"> Color name is required. </label>
+        </div>
+        <div class="form-group">
+          <label for="colorDescription">Description</label>
+          <input type="text" class="form-control" id="colorDescription" formControlName="description">
+          <label *ngIf="colorForm.get('description').invalid && processValidation" [ngClass] = "'error'"> Description is required. </label>
+        </div>
+        <div class="form-group">
+          <label for="colorIcon">Icon</label>
+          <input type="text" class="form-control" id="colorIcon" formControlName="iconClass">
+          <label *ngIf="colorForm.get('iconClass').invalid && processValidation" [ngClass] = "'error'"> Icon class name is required. </label>
+        </div>
+        <button class="btn btn-success" *ngIf="!colorIdToUpdate">Create</button>
+  		  <button class="btn btn-warning" *ngIf="colorIdToUpdate">Update</button>
+  	    <button class="btn btn-danger" (click)="backToCreateColor()" *ngIf="colorIdToUpdate">Go Back</button>
+      </form>
+      <br/>
+      <div *ngIf="statusCode; else processing">
+        <div *ngIf="statusCode === 201" [ngClass] = "'success'">
+     	       Color added successfully.
+        </div>
+        <div *ngIf="statusCode === 409" [ngClass] = "'success'">
+             Color already exists.
+        </div>
+        <div *ngIf="statusCode === 200" [ngClass] = "'success'">
+             Color updated successfully.
+        </div>
+        <div *ngIf="statusCode === 204" [ngClass] = "'success'">
+             Color deleted successfully.
+        </div>
+        <div *ngIf="statusCode === 500" [ngClass] = "'error'">
+             Internal Server Error.
+        </div>
+      </div>
+      <table class="table table-bordered" >
+        <thead class="thead-light">
+          <tr>
+            <th>#</th>
+            <th (click)="sort('name')">Name
+                <span class="fa sort-icon" *ngIf="key =='name'" [ngClass]="{'fa-chevron-up':reverse,'fa-chevron-down':!reverse}"></span>
+            </th>
+            <th (click)="sort('email')">Description
+                <span class="fa sort-icon" *ngIf="key =='email'" [ngClass]="{'fa-chevron-up':reverse,'fa-chevron-down':!reverse}"></span>
+            </th>
+            <th>Icon Class</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let color of allColors" >
+            <td>{{ color.id }}</td>
+            <td>{{ color.name }}</td>
+            <td>{{ color.description }}</td>
+            <td>{{ color.iconClass}}</td>
+            <td><button type="button" class="btn btn-primary" (click)="loadColorToEdit(color.id)">Edit</button> </td>
+          	<td><button type="button" class="btn btn-info" (click)="deleteColor(color.id)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+ </div>
+</div>

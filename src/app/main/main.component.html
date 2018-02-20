@@ -1,0 +1,11 @@
+<div class="section-a" [ngStyle]="setBackgroundColorStyle">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let color of colormgs | colormgfilter:filter | slice:(-1)*limit:3" >
+        <i class="{{color.iconClass}}"></i>
+        <h3>{{color.name}}</h3>
+        <p>{{color.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
